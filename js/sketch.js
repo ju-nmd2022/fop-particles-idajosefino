@@ -1,4 +1,6 @@
 import Fire from "./fire.js";
+import FalconParticle from "./falconparticle.js";
+import FlowerParticle from "./flowerparticle.js";
 
 let particles = [];
 
@@ -22,9 +24,19 @@ function draw() {
 window.draw = draw;
 
 function mouseClicked() {
-  for (let i = 0; i < 100; i++) {
-    let particle = new Fire(mouseX, mouseY);
+  for (let i = 0; i < 1; i++) {
+    let particle = new FalconParticle (mouseX, mouseY);
     particles.push(particle);
   }
 }
 window.mouseClicked = mouseClicked;
+
+function keyPressed() {
+  if (keyIsDown(32)) {
+    for (let i = 0; i < 10; i++) {
+      let particle = new FlowerParticle (mouseX, mouseY);
+      particles.push(particle);
+    }
+  }
+}
+window.keyPressed = keyPressed;
