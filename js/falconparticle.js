@@ -9,13 +9,14 @@ export default class FalconParticle extends Fire {
     update() {
       this.y = this.y - this.velocity;
       this.velocity = this.velocity * 0.99;
-      this.life = this.life + 2;
+      this.life = this.life + 1;
     }
   
     draw() {
       push();
       translate(this.x, this.y);
-      noStroke();
+      stroke(0, 0, 0);
+      strokeWeight(2);
       fill(215, 213, 215);
       
       //wing right

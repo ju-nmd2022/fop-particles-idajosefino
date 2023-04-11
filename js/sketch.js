@@ -10,7 +10,7 @@ function setup() {
 window.setup = setup;
 
 function draw() {
-  background(0, 0, 0);
+  background(255, 255, 255);
 
   for (let particle of particles) {
     particle.draw();
